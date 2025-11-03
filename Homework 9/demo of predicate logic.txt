@@ -1,0 +1,25 @@
+******************************
+*3 times left == 1 time right*
+******************************
+left(germany,usa).
+left(usa,russia).
+left(russia,estonia).
+(left(X,Y) & left(Y,Z) & left(Z,A)) => right(X,A).
+
+right(X,estonia)  => $ans(X).
+
+
+**************************
+*Emergency brake in a car*
+**************************
+pedestrian_in_front(X) & pedestrian_close(X) & driving_faster_than_5kmh(X) => emergency_brake(X).
+car_in_front(X) & car_close(X) & driving_faster_than_5kmh(X) => emergency_brake(X).
+
+pedestrian_in_front(my_car).
+pedestrian_close(my_car).
+driving_faster_than_5kmh(my_car).
+car_in_front(my_car).
+car_close(my_car).
+
+-emergency_brake(my_car).
+
